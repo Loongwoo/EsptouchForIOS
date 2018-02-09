@@ -49,6 +49,9 @@
     self = [super init];
     if (self)
     {
+        // create lock
+        self._lock = [[NSLock alloc]init];
+        
         self._isStop = NO;
         self._sck_fd4 = SOCKET_NULL;
         self._sck_fd6 = SOCKET_NULL;
